@@ -151,6 +151,11 @@
     const sections = document.querySelectorAll('.section');
     sections.forEach(sec => sec.classList.remove('active'));
     document.getElementById(id).classList.add('active');
+
+    // Track section view
+    gtag('event', 'section_view', {
+      section_name: id
+    });
   }
 </script>
 
